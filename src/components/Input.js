@@ -1,12 +1,9 @@
 "use client"
 
-export default function Input() {
-    function cambio(){
-        console.log("Cambie")
-    }
+export default function Input(props) {
     return(
         <>
-            <input type= "text" onChange={cambio}></input>
+            <input type={props.type} onChange={props.onChange}></input>
         </>
     )
 }

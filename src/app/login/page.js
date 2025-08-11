@@ -2,18 +2,16 @@
 
 import Button from "@/components/Button"
 import Form from "@/components/Form"
-import Input from "@/components/Input"
-import Title from "@/components/Title"
 
 
-export default function LoginPage() {
+export default function Login() {
 
     function imprimirChau() {
-        console.log("Hola")
+        console.log("Chau")
     }
-
+    
     function imprimirHola() {
-        console.log("Chau")    
+        console.log("Hola")
     }
 
     function cambio1() {
@@ -25,16 +23,15 @@ export default function LoginPage() {
     }
 
     function cambio3() {
+        console.log("Cambio3")
     }
 
     return(
         <>
             <h1>Esta es la pagina del Login</h1>
-            <Form text={"Formulario1"} onClick={imprimirChau}></Form>
-            <Input></Input>
-            <Title></Title>
-            <Button></Button>
-            
+            <Form text= {"Formulario1"} onClick= {imprimirChau} onChange1={cambio1} onChange2={cambio2} onChange3={cambio3} type={"checkbox"}></Form>
+            <Form text= {"Formulario2"} onClick= {imprimirHola} onChange1={cambio1} onChange2={cambio2} onChange3={cambio3} type={"checkbox"}></Form>
+            <Button></Button>      
         </>
     )
 }

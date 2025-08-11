@@ -1,14 +1,21 @@
 "use client"
 
+import Button from "./Button";
+import Input from "./Input";
 import Title from "./Title";
 
-export default function Form(){
+export default function Form(props){
     return(
         <>
-            <Title></Title>
-            <h3>Username: </h3>
-            <Login></Login>
-            
+            <Title text={props.text}></Title>
+            <h3>Usuario:</h3>
+            <Input onChange= {props.onChange1} type={"text"}></Input>
+            <h3>Email:</h3>
+            <Input onChange={props.onChange2} type={"text"}></Input>
+            <h3>Contraseña:</h3>
+            <Input onChange={props.onChange3} type={"text"}></Input>
+            <Input type={props.type}></Input>
+            <Button text={props.text} onClick={props.onClick}></Button>
         </>
     )
-}
+}   
