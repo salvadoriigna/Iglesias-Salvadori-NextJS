@@ -3,6 +3,7 @@
 import Button from "@/components/Button"
 import Input from "@/components/Input"
 import Title from "@/components/Title"
+import { useEffect, useState } from "react"
 
 export default function ContadorPage() {
     const [cuenta, setCuenta] = useState(0)
@@ -10,6 +11,9 @@ export default function ContadorPage() {
 
     function incrementar() {
         setCuenta(cuenta + 1)
+        if (cuenta == 20){
+            setCuenta(0)
+        }
     }
 
     function decrementar() {
@@ -17,22 +21,18 @@ export default function ContadorPage() {
     }
 
     function checkBoxCambio(event) {
-        chequear(event.target.checked)
+        setChequear(event.target.checked)
     }
 
-    function comprobar() {
-        if(chequear == true){
-            incrementar()
-        } else{
-            decrementar()
-        }
-    }
-    
     return (
         <>
             <Title title="Pagina del contador"></Title>
-            <Button onClick={comprobar} text="Incrementar/Decretementar"></Button>
+            <Button onClick={incrementar} text="Incrementar"></Button>
+            <br></br>
+            <Button onClick={decrementar} text="Decretementar"></Button>
+            <br></br>
             <Input type="checkbox" onChange={checkBoxCambio}></Input>
+            <h2>{cuenta}</h2>
         </>
     )
 }
