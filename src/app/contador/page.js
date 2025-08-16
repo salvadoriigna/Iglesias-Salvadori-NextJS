@@ -10,17 +10,17 @@ export default function ContadorPage() {
     const [chequear, setChequear] = useState(false)
 
     function cambiarCuenta() {
-        let valor = cuenta 
+        let nuevoValor = cuenta 
         if (chequear) {
-            valor = cuenta + 1
+            nuevoValor = cuenta + 1
         } else {
-            valor = cuenta - 1
+            nuevoValor = cuenta - 1
         }
 
-        if (valor == 20) {
-            valor = 0
+        if (nuevoValor == 20) {
+            nuevoValor = 0
         }
-        setCuenta(valor)
+        setCuenta(nuevoValor)
     }
 
     function checkBoxCambio(event) {
