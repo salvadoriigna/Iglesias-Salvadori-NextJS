@@ -1,0 +1,12 @@
+.button{
+    color: white;
+    border-radius: 15px;
+}
+
+.incrementar{
+    background-color:blueviolet;
+
+}
+.decrementar{
+    background-color: rgb(105, 108, 3)
+}
