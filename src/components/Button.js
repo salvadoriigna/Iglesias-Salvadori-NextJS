@@ -9,7 +9,7 @@ export default function Button(props){
             <button className ={
                 clsx(
                 {
-                    [styles.button]: true
+                    
                     
                 }
                 )
